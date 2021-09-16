@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="First.master.cs" Inherits="Campus.MasterPages.First" %>
+<%@ Register Src="~/UserControl/First.ascx" TagPrefix="uc1" TagName="WebheaderInstitute" %>
+<%@ Register Src="~/UserControl/Footer.ascx" TagPrefix="uc1" TagName="footer" %>
+<%@ Register Src="~/UserControl/RoundedCorner.ascx" TagPrefix="uc1" TagName="roundc" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+        <title> Online Payroll System
+        </title>
+     <style>
+    body  {
+    background-image: url("../Attachment/DefaultPhoto/b22.jpg");
+    background-color: #5F88A4;
+    background-size :10%;
+    background-repeat: repeat-x;
+    /*opacity: 0.4;
+    filter: alpha(opacity=40);*/
+}
+        </style>    
+  
+     <link runat="server" rel="shortcut icon" href="~/Attachment/DefaultPhoto/View.ico" type="image/x-icon"/>
+     <link runat="server" rel="icon" href="~/Attachment/DefaultPhoto/View.ico" type="image/ico"/>
+
+<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="../StyleSheets/MyHome.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="PageBody" runat="server">
+ 
+    <div class="wrapper"> 
+        <form id="form1" runat="server">
+            <uc1:WebheaderInstitute runat="server" id="Webheadercollege" />
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12   container-padding">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+    
+                </div>
+            </div>
+           <script src="../Scripts/jquery.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.js"></script>
+        </form>
+    </div>
+    <uc1:footer runat="server" id="footer" />
+</body>
+</html>
